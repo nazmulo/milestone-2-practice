@@ -56,3 +56,32 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* complex-layout-grid */
+
+.container1 {
+    display: grid;
+    gap: 3px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 200px);
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+.big-layout {
+    grid-column: span 6;
+    grid-row: span 2;
+}
+
+.normal-layout {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.wide-layout {
+    grid-column: span 2;
+    grid-row: span 1;
+}
