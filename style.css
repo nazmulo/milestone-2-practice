@@ -111,3 +111,70 @@ img {
     background-color: gray;
     padding: 10px;
 }
+
+/* complex-layout-grid-3 */
+
+.container3 {
+    border: 3px solid gold;
+    background-color: blanchedalmond;
+    padding: 30px;
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "header header header header"
+    "navbar main main sidebar"
+    "navbar main main advertise"
+    "footer footer footer footer";
+}
+
+header {
+    grid-area: header ;
+}
+
+nav {
+    grid-area: navbar ;
+}
+
+main {
+    grid-area: main ;
+}
+
+#sidebar1 {
+    grid-area: sidebar ;
+} 
+
+#advertise {
+    grid-area: advertise ;
+}
+
+#footer {
+    grid-area: footer ;
+}
+
+@media screen and (max-width:576px) {
+
+    .container3 {
+    
+    grid-template-areas: 
+    "header header header"
+    "navbar navbar navbar"
+    "sidebar main main"
+    "advertise footer footer footer";
+}
+
+}
+
+@media screen and (min-width:576px) and (max-width:992px) {
+
+    .container3 {
+    
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "advertise"
+    "footer";
+}
+
+}
